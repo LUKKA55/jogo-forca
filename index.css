@@ -32,7 +32,12 @@ body {
 #title {
 	font-size: 5rem;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	margin-bottom: 100px;
+	margin-bottom: 15px;
+}
+
+#e7 {
+	font-size: 2rem;
+	margin-bottom: 80px;
 }
 
 #tema {

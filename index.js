@@ -166,7 +166,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				erro += 1;
 				if (erro > 6) {
 					return (master.innerHTML = `
-					<h1 style = "text-decoration: underline;">GAME OVER</h1>
+					<div style="display:flex; align-items:center; flex-direction:column; align-itens:center">
+						<h1 style = "text-decoration: underline;">GAME OVER</h1>
+						<h2> scoreboard: ${scoreboard}</h2>	
+					</div>
 					`);
 				}
 				document.getElementById(`e${erro}`).style.zIndex = '2000';

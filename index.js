@@ -219,7 +219,7 @@ function newGame() {
 	numLetra = 0;
 	for (let i = 0; i < letrasSeparadas.length; i++) {
 		div.innerHTML += `
-    <div style="display:flex; flex-direction:column; line-height: 0; letter-spacing:1px;">
+    <div style="display:flex; flex-direction:column; line-height: 0; letter-spacing:1.5px; align-items:center">
     	<p id="${i}" style="color:rgb(219, 142, 61)">${letrasSeparadas[i]}</p>
     	<p id="p${i}">_</p>
     </div>

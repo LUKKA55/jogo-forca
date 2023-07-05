@@ -120,7 +120,7 @@ const bancoDeDados = [
 	{ palavra: 'celular', tema: 'objeto' },
 	{ palavra: 'computador', tema: 'objeto' },
 	{ palavra: 'aculos', tema: 'objeto' },
-	{ palavra: 'relagio', tema: 'objeto' },
+	{ palavra: 'relogio', tema: 'objeto' },
 	{ palavra: 'cama', tema: 'objeto' },
 	{ palavra: 'lampada', tema: 'objeto' },
 	{ palavra: 'chave', tema: 'objeto' },
@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (
 				adivinhaLetra.value.length > 1 ||
 				adivinhaLetra.value === '' ||
+				adivinhaLetra.value === ' ' ||
 				incluiLetra(adivinhaLetra.value.toUpperCase()) === 0
 			) {
 				adivinhaLetra.value = '';
@@ -166,9 +167,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				erro += 1;
 				if (erro > 6) {
 					return (master.innerHTML = `
-					<div style="display:flex; align-items:center; flex-direction:column; align-itens:center">
+					<div style="display:flex; align-items:center; flex-direction:column; align-itens:center; gap:15px;">
 						<h1 style = "text-decoration: underline;">GAME OVER</h1>
-						<h2> scoreboard: ${scoreboard}</h2>	
+						<h2> Palavra: ${letras.join('')}</h2>
+						<h2> Scoreboard: ${scoreboard}</h2>	
 					</div>
 					`);
 				}
@@ -225,6 +227,7 @@ function newGame() {
 
 		if (letrasSeparadas[i] === ' ') {
 			document.getElementById(`p${i}`).style.color = 'rgb(219, 142, 61)';
+			numLetra += 1;
 		}
 	}
 

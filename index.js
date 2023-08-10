@@ -226,7 +226,8 @@ function newGame() {
     `;
 
 		if (letrasSeparadas[i] === ' ') {
-			document.getElementById(`p${i}`).style.color = 'rgb(219, 142, 61)';
+			const espaco = document.getElementById(`p${i}`);
+			espaco.innerHTML = `-`;
 			numLetra += 1;
 		}
 	}
